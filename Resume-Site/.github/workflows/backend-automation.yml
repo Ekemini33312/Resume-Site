@@ -11,4 +11,4 @@ jobs:
         with:
           python-version: "3.10"
       - name: test lambda-function
-        run: cd resume-site/get-function/back-end/lambdacode && go test -v ./ 
+        run: cd resume-site/get-function/back-end/lambdacode && go test -v
