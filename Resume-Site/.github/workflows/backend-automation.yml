@@ -1,5 +1,7 @@
 name: backend-automation
 on: push
+env:
+  GO_VERSION: 1.15.x
 
 jobs:
   test-infra:
@@ -7,8 +9,8 @@ jobs:
     timeout-minutes: 2
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-go@v2.1.3
         with:
-          python-version: "3.10"
+          go-version: ${{ env.GO_VERSION }}
       - name: test lambda-function
-        run: cd resume-site/get-function/back-end/lambdacode && go test -v
+        run: cd resume-site/back-end/lambdacode && go test -v ./ && cd ../../

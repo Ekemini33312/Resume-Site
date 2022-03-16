@@ -1,1 +1,16 @@
 .DS_Store
+name: backend-automation
+on: push
+  branches: [main]
+
+jobs:
+  test-infra:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+      - name: test lambda-function
+        run: cd resume-site/get-function/back-end/lambdacode && go test -v
