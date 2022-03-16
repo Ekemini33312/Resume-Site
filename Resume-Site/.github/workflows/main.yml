@@ -1,4 +1,4 @@
-name: backend-automation
+name: main
 on: push
 env:
   GO_VERSION: 1.15.x
