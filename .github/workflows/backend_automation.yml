@@ -1,16 +1,17 @@
-name: backend_automation
-on: push
-env:
-  GO_VERSION: 1.18.x
+name: backend-automation
+
+on:
+  push:
+    branches: [ main ]
 
 jobs:
-  build-infra:
+  test-infra:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-go@v2
+      - uses: actions/setup-python@v3
         with:
-          go-version: ${{ env.GO_VERSION }}
-      - name: test get-function
-        run: cd resume-site/lambdacode && go test -v ./ && cd ../../
+          python-version: '3.10'
+      - name: test lambda-function
+        run: pytest
