@@ -22,7 +22,7 @@ jobs:
       run: |
     - name: Test with pytest
       run: |
-        pytest
+        pytest test_update_lambda.py
 
 
   build-and-deploy-infrastructure:
