@@ -16,7 +16,7 @@ Resources:
         KeyType: "HASH"
 
   MyVisitorCountFunction:
-    Type: AWS::Serverless::Function
+    Type: AWS::Lambda::Function
     Properties:
       CodeUri: /resume-site
       Handler: update_lambda.lambda_handler
