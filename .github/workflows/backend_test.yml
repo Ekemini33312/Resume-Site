@@ -31,8 +31,6 @@ jobs:
       run: |
         pytest
 
-
-
   build-and-deploy-infrastructure:
     needs: test-infrastructure
     runs-on: ubuntu-latest
