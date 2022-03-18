@@ -29,5 +29,4 @@ Resources:
           Properties:
             Path: /resume-site
             Method: get
-    Metadata:
-      SamResourceId: MyVisitorCountFunction
+    
