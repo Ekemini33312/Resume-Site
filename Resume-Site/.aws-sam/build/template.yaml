@@ -18,12 +18,11 @@ Resources:
   MyVisitorCountFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: MyVisitorCountFunction
+      CodeUri: /resume-site
       Handler: update_lambda.lambda_handler
       Runtime: python3.9
       Policies:
       - AmazonDynamoDBFullAccess
-      - AWSLambdaFullAccess
       Events:
         MyVisitorCount:
           Type: Api
