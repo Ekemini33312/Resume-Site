@@ -10,20 +10,22 @@ Resources:
       TableName: table
       BillingMode: PAY_PER_REQUEST
       AttributeDefinitions:
-      - AttributeName: visitors
-        AttributeType: N
+      - AttributeName: "visitors"
+        AttributeType: "N"
       KeySchema:
-      - AttributeName: visitors
-        KeyType: HASH
+      - AttributeName: "visitors"
+        KeyType: "HASH"
   MyVisitorCountFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: /resume-site
+      CodeUri: resume-site/
       Handler: update_lambda.lambda_handler
       Runtime: python3.9
       Policies:
-      - AmazonDynamoDBFullAccess
-      Events:
+        - AmazonDynamoDBFullAccess
+        - AdministratorAccess
+        - AWSLambda_FullAccess
+      Events: 
         MyVisitorCount:
           Type: Api
           Properties:
