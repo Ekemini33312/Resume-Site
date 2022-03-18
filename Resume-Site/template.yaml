@@ -1,5 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Ekemini's Cloud Resume SAM Deployment into CloudFormation (IaC)
+
 Resources:
   MyDynamoDBTable:
     Type: AWS::DynamoDB::Table
