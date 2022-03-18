@@ -18,7 +18,7 @@ Resources:
   MyVisitorCountFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: /resume-site
+      CodeUri: s3://aws-sam-cli-managed-default-samclisourcebucket-132hgiu8k2zqs/sam-app/e564c99aa4456ec500fc7d8eefb0f22c
       Handler: update_lambda.lambda_handler
       Runtime: python3.9
       Policies:
@@ -29,4 +29,5 @@ Resources:
           Properties:
             Path: /resume-site
             Method: get
-    
+    Metadata:
+      SamResourceId: MyVisitorCountFunction
