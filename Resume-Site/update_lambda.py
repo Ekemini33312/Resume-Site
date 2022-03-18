@@ -6,7 +6,7 @@ import json
 #columns = "visitors", "vc"
 
 def lambda_handler(event, context):
-    client = boto3.resource('dynamodb')
+    client = boto3.resource('dynamodb',region_name='us-east-1') 
     table = client.Table('table')
     
     response = table.get_item(
