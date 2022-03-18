@@ -38,5 +38,4 @@ Resources:
           Properties:
             Path: /resume-site
             Method: get
-      Role: sam-app-MyVisitorCountFunctionRole-1PEOLJNIF2F3W
         

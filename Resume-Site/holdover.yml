@@ -14,11 +14,11 @@ Resources:
       KeySchema:
       - AttributeName: "visitors"
         KeyType: "HASH"
+
   MyVisitorCountFunction:
     Type: AWS::Serverless::Function
-    DeletionPolicy: Retain
     Properties:
-      CodeUri: ./resume-site
+      CodeUri: resume-site/
       Handler: update_lambda.lambda_handler
       Runtime: python3.9
       Policies:
@@ -29,4 +29,4 @@ Resources:
           Properties:
             Path: /resume-site
             Method: get
-        
+            
