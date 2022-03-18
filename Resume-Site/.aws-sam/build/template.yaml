@@ -1,14 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Ekemini's Cloud Resume SAM Deployment into CloudFormation (IaC)
-
-Globals:
-  Api:
-    Cors:
-      AllowMethods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
-      AllowHeaders: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
-      AllowOrigin: "'*'"
-
 Resources:
   MyDynamoDBTable:
     Type: AWS::DynamoDB::Table
@@ -17,25 +9,25 @@ Resources:
       TableName: table
       BillingMode: PAY_PER_REQUEST
       AttributeDefinitions:
-      - AttributeName: "visitors"
-        AttributeType: "N"
+      - AttributeName: visitors
+        AttributeType: N
       KeySchema:
-      - AttributeName: "visitors"
-        KeyType: "HASH"
-
+      - AttributeName: visitors
+        KeyType: HASH
   MyVisitorCountFunction:
     Type: AWS::Serverless::Function
     DeletionPolicy: Retain
     Properties:
-      CodeUri: ./LambdaCode
+      CodeUri: MyVisitorCountFunction
       Handler: update_lambda.lambda_handler
       Runtime: python3.9
       Policies:
-        - AmazonDynamoDBFullAccess
-      Events: 
+      - AmazonDynamoDBFullAccess
+      Events:
         MyVisitorCount:
           Type: Api
           Properties:
             Path: /resume-site
             Method: get
-        
+    Metadata:
+      SamResourceId: MyVisitorCountFunction
