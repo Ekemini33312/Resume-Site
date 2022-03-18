@@ -25,6 +25,7 @@ Resources:
 
   MyVisitorCountFunction:
     Type: AWS::Serverless::Function
+    DeletionPolicy: Retain
     Properties:
       CodeUri: ./LambdaCode
       Handler: update_lambda.lambda_handler
