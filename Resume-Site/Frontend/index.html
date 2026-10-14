@@ -1,582 +1,206 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekemini Liron Essien — Resume</title>
-    <style>
-        /* ─── Reset & Base ─── */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+	<title>Ekemini L. Essien | Cloud | AI Security Engineer | eleresume.com</title>
+	<link rel="shortcut icon" type="image/png" href="favicon.png" >
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-        body {
-            font-family: 'Georgia', serif;
-            font-size: 14px;
-            color: #1a1a1a;
-            background-color: #f0f2f5;
-            line-height: 1.6;
-        }
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
 
-        a {
-            color: #2c5f8a;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* ─── Page Wrapper ─── */
-        .page {
-            max-width: 960px;
-            margin: 40px auto;
-            background: #ffffff;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-            border-radius: 6px;
-            overflow: hidden;
-        }
-
-        /* ─── Header ─── */
-        header {
-            background-color: #1b2a3b;
-            color: #ffffff;
-            text-align: center;
-            padding: 40px 40px 30px;
-        }
-
-        header h1 {
-            font-size: 2.2em;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-        }
-
-        header h2 {
-            font-size: 1em;
-            font-weight: normal;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #a8c0d6;
-            margin-bottom: 12px;
-        }
-
-        header .contact-line {
-            font-size: 0.88em;
-            color: #cdd9e5;
-            margin-bottom: 18px;
-        }
-
-        header .contact-line a {
-            color: #a8c0d6;
-        }
-
-        header nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            font-size: 0.85em;
-            margin-bottom: 18px;
-        }
-
-        header nav a,
-        header nav span {
-            color: #a8c0d6;
-            border: 1px solid #3a5068;
-            padding: 4px 12px;
-            border-radius: 20px;
-            transition: background 0.2s;
-        }
-
-        header nav a:hover {
-            background: #2c5f8a;
-            text-decoration: none;
-        }
-
-        .download-btn {
-            display: inline-block;
-            background-color: #2c7be5;
-            color: #fff !important;
-            padding: 8px 22px;
-            border-radius: 4px;
-            font-size: 0.85em;
-            letter-spacing: 1px;
-            transition: background 0.2s;
-        }
-
-        .download-btn:hover {
-            background-color: #1a5fbb;
-            text-decoration: none;
-        }
-
-        /* ─── Body Layout ─── */
-        .body-wrapper {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            align-items: start;
-        }
-
-        /* ─── Sidebar ─── */
-        aside {
-            background-color: #f7f9fb;
-            border-right: 1px solid #e0e6ed;
-            padding: 30px 24px;
-            min-height: 100%;
-        }
-
-        aside section {
-            margin-bottom: 30px;
-        }
-
-        aside h3 {
-            font-size: 0.75em;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #2c5f8a;
-            border-bottom: 2px solid #2c5f8a;
-            padding-bottom: 6px;
-            margin-bottom: 14px;
-        }
-
-        /* Certifications */
-        aside .cert-list {
-            list-style: none;
-        }
-
-        aside .cert-list li {
-            margin-bottom: 14px;
-            padding-bottom: 14px;
-            border-bottom: 1px solid #e0e6ed;
-            font-size: 0.88em;
-        }
-
-        aside .cert-list li:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        aside .cert-list strong {
-            display: block;
-            color: #1b2a3b;
-            font-size: 0.95em;
-            margin-bottom: 2px;
-        }
-
-        aside .cert-list span {
-            color: #666;
-            font-size: 0.9em;
-        }
-
-        /* Skills */
-        aside .skill-list {
-            list-style: none;
-        }
-
-        aside .skill-list li {
-            font-size: 0.87em;
-            margin-bottom: 10px;
-            color: #333;
-            line-height: 1.5;
-        }
-
-        aside .skill-list strong {
-            display: block;
-            color: #1b2a3b;
-            margin-bottom: 2px;
-        }
-
-        /* Education */
-        aside .edu-entry {
-            margin-bottom: 16px;
-            font-size: 0.88em;
-        }
-
-        aside .edu-entry:last-child {
-            margin-bottom: 0;
-        }
-
-        aside .edu-entry strong {
-            display: block;
-            color: #1b2a3b;
-            font-size: 0.95em;
-        }
-
-        aside .edu-entry .edu-year {
-            color: #2c5f8a;
-            font-size: 0.9em;
-        }
-
-        aside .edu-entry .edu-degree {
-            color: #444;
-            margin-top: 2px;
-        }
-
-        /* ─── Main Content ─── */
-        main {
-            padding: 30px 32px;
-        }
-
-        main section {
-            margin-bottom: 30px;
-        }
-
-        main h3 {
-            font-size: 0.75em;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #2c5f8a;
-            border-bottom: 2px solid #2c5f8a;
-            padding-bottom: 6px;
-            margin-bottom: 16px;
-        }
-
-        /* Profile */
-        .profile-text {
-            font-size: 0.92em;
-            color: #333;
-            line-height: 1.7;
-        }
-
-        /* Job Entries */
-        article {
-            margin-bottom: 22px;
-        }
-
-        article:last-child {
-            margin-bottom: 0;
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            margin-bottom: 8px;
-        }
-
-        .job-header h4 {
-            font-size: 0.97em;
-            color: #1b2a3b;
-            font-weight: bold;
-        }
-
-        .job-header .job-dates {
-            font-size: 0.82em;
-            color: #2c7be5;
-            font-style: italic;
-            white-space: nowrap;
-        }
-
-        article ul {
-            list-style: disc;
-            padding-left: 18px;
-        }
-
-        article ul li {
-            font-size: 0.88em;
-            color: #333;
-            margin-bottom: 5px;
-            line-height: 1.6;
-        }
-
-        /* Projects */
-        .project-entry h4 {
-            font-size: 0.97em;
-            color: #1b2a3b;
-            font-weight: bold;
-        }
-
-        .project-entry .project-date {
-            font-size: 0.82em;
-            color: #2c7be5;
-            font-style: italic;
-            margin-bottom: 6px;
-        }
-
-        .project-entry p {
-            font-size: 0.88em;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* ─── Footer ─── */
-        footer {
-            background-color: #1b2a3b;
-            color: #a8c0d6;
-            text-align: center;
-            padding: 18px 40px;
-            font-size: 0.82em;
-        }
-
-        footer p {
-            margin-bottom: 4px;
-        }
-
-        footer span {
-            color: #2c7be5;
-            font-weight: bold;
-        }
-
-        /* ─── Responsive ─── */
-        @media (max-width: 700px) {
-            .body-wrapper {
-                grid-template-columns: 1fr;
-            }
-
-            aside {
-                border-right: none;
-                border-bottom: 1px solid #e0e6ed;
-            }
-
-            .job-header {
-                flex-direction: column;
-            }
-
-            header h1 {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+	<link rel="stylesheet" type="text/css" href="reset-fonts-grids.css" media="all" /> 
+	<link rel="stylesheet" type="text/css" href="resume.css" media="all" />
 </head>
 <body>
 
-<div class="page">
+<div id="doc2" class="yui-t7">
+	<div id="inner">
+	
+		<div id="hd">
+ 			<div class="yui-gc">
+				<div class="yui-u first">
+					<h1>Ekemini L. Essien</h1>
+					<h2>Cloud | AI Security Engineer</h2>
+					<h3><a id="pdf" href="ekemini_resume_2026.pdf">Download PDF</a></h3>
+				</div>
 
-    <!-- ─── Header ─── -->
-    <header>
-        <h1>Ekemini Liron Essien</h1>
-        <h2>Cloud | AI Security Engineer</h2>
-        <p class="contact-line">
-            Richardson, TX  |  469-647-2097  | 
-            <a href="mailto:miniessien@gmail.com">miniessien@gmail.com</a>
-             | 
-            <a href="https://www.eleresume.com" target="_blank">www.eleresume.com</a>
-        </p>
-        <nav>
-            <a href="mailto:miniessien@gmail.com">Email</a>
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://www.eleresume.com" target="_blank">My Cloud Blog!</a>
-            <span>(469) 647-2097</span>
-            <span>Richardson, TX</span>
-        </nav>
-        <a href="ekemini_resume_2026.pdf" download class="download-btn">⬇ Download PDF</a>
-    </header>
+				<div class="yui-u">
+					<div class="contact-info">
+						<h3><a href="mailto:miniessien@gmail.com">Email</a></h3>
+						<h3><a href="https://www.linkedin.com/in/ekemini-liron-essien-a63b80a2/">LinkedIn</a></h3>
+						<h3><a href="https://dev.to/ekemini33312/the-day-i-jumped-into-the-clouds-1lee">My Cloud Blog!</a></h3>
 
-    <div class="body-wrapper">
+						<h3>(469) 647-2097</h3>
+						<h3>Richardson, TX</h3>
 
-        <!-- ─── Sidebar ─── -->
-        <aside>
+					</div><!--// .contact-info -->
+				</div>
+			</div><!--// .yui-gc -->
+		</div><!--// hd -->
 
-            <!-- Certifications -->
-            <section>
-                <h3>Certifications</h3>
-                <ul class="cert-list">
-                    <li>
-                        <strong>AWS AI Practitioner</strong>
-                        <span>Issued: August 2026</span><br>
-                        <span>Expires: August 2029</span>
-                    </li>
-                    <li>
-                        <strong>AWS Machine Learning Associate</strong>
-                        <span>Issued: September 19, 2026</span><br>
-                        <span>Expires: September 19, 2029</span>
-                    </li>
-                    <li>
-                        <strong>AWS Solutions Architect Associate</strong>
-                        <span>Scheduled: October 16, 2026</span><br>
-                        <span>Expiration pending issuance</span>
-                    </li>
-                    <li>
-                        <strong>CompTIA Security+</strong>
-                        <span>Issued: August 18, 2020</span><br>
-                        <span>Expires: August 18, 2029</span>
-                    </li>
-                    <li>
-                        <strong>AWS Cloud Practitioner</strong>
-                        <span>Issued: February 23, 2022</span><br>
-                        <span>Expires: September 19, 2029</span>
-                    </li>
-                </ul>
-            </section>
+		<div id="bd">
+			<div id="yui-main">
+				<div class="yui-b">
 
-            <!-- Technical Skills -->
-            <section>
-                <h3>Technical Skills</h3>
-                <ul class="skill-list">
-                    <li>
-                        <strong>Cloud & Infrastructure</strong>
-                        AWS, EC2, S3, RDS, VPC, IAM, Route 53, CloudFront,
-                        Elastic Load Balancing, Lambda, Secrets Manager, EMR
-                    </li>
-                    <li>
-                        <strong>Cloud Security</strong>
-                        AWS Security Hub, CIS AWS Foundations Benchmark,
-                        AWS Foundational Security Best Practices, IAM/RBAC,
-                        least privilege, MFA, vulnerability remediation
-                    </li>
-                    <li>
-                        <strong>DevSecOps & Automation</strong>
-                        Terraform, Infrastructure as Code, Policy as Code,
-                        CI/CD, Python, AWS Lambda, CloudFormation
-                    </li>
-                    <li>
-                        <strong>Networking</strong>
-                        VPC, route tables, VPN/OpenVPN, DNS, TLS, load balancers
-                    </li>
-                    <li>
-                        <strong>Data & Platforms</strong>
-                        Databricks, Athena, DynamoDB, RDS, SQL/NoSQL,
-                        Alteryx, Tableau
-                    </li>
-                    <li>
-                        <strong>Compliance & Privacy</strong>
-                        SOC 2, security questionnaires, access reviews,
-                        data privacy, CCPA
-                    </li>
-                </ul>
-            </section>
+					<div class="yui-gf">
+						<div class="yui-u first">
+							<h2>Certifications</h2>
+						</div>
+						<div class="yui-u">
 
-            <!-- Education -->
-            <section>
-                <h3>Education</h3>
-                <div class="edu-entry">
-                    <strong>Solent University</strong>
-                    <span class="edu-year">Southampton, England | 2016–2017</span>
-                    <p class="edu-degree">Master of Science, Management — First Class</p>
-                </div>
-                <div class="edu-entry">
-                    <strong>Houston Baptist University</strong>
-                    <span class="edu-year">Houston, Texas | 2012–2016</span>
-                    <p class="edu-degree">Bachelor of Business Administration — Cum Laude</p>
-                </div>
-            </section>
+								<div class="talent">
+									<h2>AWS Certified Cloud Practitioner</h2>
+									<p>Issued: Feb 2022 </p>
+									<p>Expires: Feb 2025</p>
+									<p>Credential ID: ETVQFH0B3E4EQV9Z5</p>
+								</div>
 
-        </aside>
+								<div class="talent">
+									<h2>CompTIA Security+ Certified</h2>
+									<p>Issued: Aug 2020 </p>
+									<p>Expires: Aug 2023</p>
+									<p>Credential ID: CQQ1ZTLG8CF1QQC6</p>
+								</div>
 
-        <!-- ─── Main Content ─── -->
-        <main>
+								<div class="talent">
+									<h2>AWS Solutions Architect - Associate</h2>
+									<p>In Progress!</p>
+								</div>
+						</div>
+					</div><!--// .yui-gf -->
 
-            <!-- Profile -->
-            <section>
-                <h3>Profile</h3>
-                <p class="profile-text">
-                    Cloud security and DevSecOps professional with experience securing AWS environments,
-                    implementing IAM/RBAC and policy-as-code controls, remediating cloud security findings,
-                    supporting SOC 2 compliance, and improving infrastructure resilience. Combines hands-on
-                    cloud engineering with enterprise security assessment and stakeholder communication experience.
-                </p>
-            </section>
+					<div class="yui-gf">
+						<div class="yui-u first">
+							<h2>Technical</h2>
+						</div>
+						<div class="yui-u">
+							<ul class="talent">
+								<li>Cloud Services/Serverless</li>
+								<li>Application Security</li>
+								<li>CloudFront/Route53</li>
+								<li class="last">Lambda/DynamoDB</li>
+							</ul>
 
-            <!-- Employment History -->
-            <section>
-                <h3>Employment History</h3>
+							<ul class="talent">
+								<li>IAM</li>
+								<li>HTML/CSS</li>
+								<li>Networking</li>
+								<li class="last">IaC</li>
+							</ul>
 
-                <!-- Tunnl -->
-                <article>
-                    <div class="job-header">
-                        <h4>Tunnl — DevSecOps Engineer</h4>
-                        <span class="job-dates">April 2022 – Present</span>
-                    </div>
-                    <ul>
-                        <li>Designed and maintained AWS security controls across IAM, S3, EC2, RDS, VPC,
-                            Elastic Load Balancing, Secrets Manager, and related cloud services, supporting
-                            alignment with AWS Foundational Security Best Practices and CIS AWS Foundations
-                            benchmarks.</li>
-                        <li>Remediated AWS Security Hub findings involving IAM credentials, MFA, S3 security
-                            controls, load balancer configuration, network protections, logging, and unused
-                            secrets.</li>
-                        <li>Developed and maintained Terraform-based IAM/RBAC and policy-as-code frameworks
-                            to enforce least-privilege access across AWS resources.</li>
-                        <li>Supported SOC 2 compliance through control evidence, documentation, quarterly
-                            access reviews, and recurring compliance activities across AWS and engineering
-                            tools.</li>
-                        <li>Administered identity and access for employees, contractors, and engineering teams
-                            across AWS, Databricks, GitHub, VPN, and other enterprise systems.</li>
-                        <li>Supported disaster-recovery planning and cross-region infrastructure migration
-                            across multiple availability zones, spanning EC2, RDS, S3, ClickHouse, Airflow,
-                            Cognito, VPN, DNS, and application infrastructure.</li>
-                        <li>Automated AWS IAM access-key rotation using AWS Lambda and Secrets Manager to
-                            strengthen credential management and reduce manual security operations.</li>
-                        <li>Supported privacy and data-protection operations, enterprise security
-                            questionnaires, and troubleshooting for cloud services and developer
-                            infrastructure.</li>
-                    </ul>
-                </article>
+							<ul class="talent">
+								<li>Full Stack Software</li>
+								<li>Version Control</li>
+								<li>VPN/VPC</li>
+								<li class="last">CI/CD</li>
+							</ul>
+						</div>
+					</div><!--// .yui-gf-->
 
-                <!-- Cymulate -->
-                <article>
-                    <div class="job-header">
-                        <h4>Cymulate — Cyber-Risk Assessment Specialist</h4>
-                        <span class="job-dates">September 2020 – March 2022</span>
-                    </div>
-                    <ul>
-                        <li>Collaborated with CISOs and enterprise security teams to simulate attacks across
-                            email, web gateways, endpoint security, lateral movement, and data exfiltration.</li>
-                        <li>Supported extended security posture management initiatives by validating security
-                            controls and mapping risks to the MITRE ATT&CK framework.</li>
-                        <li>Advised enterprise teams on cloud migration security, attack surface management,
-                            automated red teaming, and purple-team exercises.</li>
-                    </ul>
-                </article>
+					<div class="yui-gf">
+	
+						<div class="yui-u first">
+							<h2>Experience</h2>
+						</div><!--// .yui-u -->
 
-                <!-- Operatix -->
-                <article>
-                    <div class="job-header">
-                        <h4>Operatix — Business Development</h4>
-                        <span class="job-dates">September 2019 – September 2020</span>
-                    </div>
-                    <ul>
-                        <li>Supported software and cloud vendor portfolios, connecting security leaders with
-                            solutions for threat intelligence, API protection, privacy, and Salesforce
-                            security.</li>
-                    </ul>
-                </article>
+						<div class="yui-u">
 
-                <!-- Globe Life -->
-                <article>
-                    <div class="job-header">
-                        <h4>Globe Life — Business Development Manager</h4>
-                        <span class="job-dates">December 2017 – September 2019</span>
-                    </div>
-                    <ul>
-                        <li>Managed a high-performing team generating an average of $500,000 in annual
-                            recurring revenue and introduced real-time goal-tracking to improve
-                            performance.</li>
-                    </ul>
-                </article>
+							<div class="job">
+								<h2>Tunnl</h2>
+								<h3>DevSecOps Engineer</h3>
+								<h4>2022-Present</h4>
+								<p class="justified">Design RBAC/IAM (Policy-as-Code) frameworks for Terraform deployment to aid in policy enforcement on various types of AWS resources teams can provision and use.</p>
+     						    <p class="justified">Maintain and refine security solutions and threat detection components to improve the organization's security posture.</p>
+								<p class="justified">Create and leverage AWS CloudFormation templates to launch EC2 images with respect to auto-scaling groups for various CI/CD pipelines.</p>
+								<ul> 
+									<li class="last">
+										-Provision and manage AWS EC2s, AWS IAM Users, and Remote Desktop Workstations for new hires.
+									</li>
+									<li class="last">
+										-Train new hires in AWS Best Security Practices & Standards and DevOps Principles. 
+									</li>
+									<li class="last">
+										-Create and manage various AWS IAM Users, Roles, Policies to ensure least principle of least privilege. 
+									</li>	
+									<li class="last">
+										-Build cloud-based networking solutions with an understanding of network topologies and protocols.
+									</li>
+									<li class="last">
+										-Lead company-wide presentations on the importance of security best practices.
+									</li>
+								</ul>
+							</div>
+							
+							<div class="job">
+								<h2>Cymulate</h2>
+								<h3>Cyber-Risk Assessment Specialist</h3>
+								<h4>2020-Present</h4>
+								<p class="justified">Collaborated with CISOs by providing education around simulating cyber-attacks across vectors including email and web gateway, endpoint security, and lateral movement.</p>
+         						<p class="justified">Aligned with multi-B corporations to support their extended security posture management (XSPM) initiatives by continuously challenging, validating, and managing their security risk, end-to-end across the MITRE ATT&CK framework.</p>
+     						    <p class="justified">Mapped out organizations with mature security stacks and initiate projects surrounding securing cloud migration by utilizing attack surface management, security control validation, and automated red teaming.</p>
+        						<p class="justified">Consulted with enterprise security teams on simulating attacks via data exfiltration, immediate threat intelligence, and full-kill chain APT, to assist security augmentation.</p>
+       							<p class="justified">Advised teams on automating purple and red teaming by generating penetration scenarios and advanced attack campaigns tailored to their environments and policies.</p>
+							</div>
 
-            </section>
+							<div class="job">
+								<h2>Operatix</h2>
+								<h3>Information Security Business Development Specialist</h3>
+								<h4>2019-2020</h4>
+								<p class="justified">Accelerated the growth of various client portfolios consisting of 100% software/cloud vendors.</p>
+								<p class="justified">Created various meetings rooted in operationalizing threat intelligence with SOC teams and SOC personnel.</p>
+								<p class="justified">Introduced web application and API shielding to CISOs interested in adopting digital transformation initiatives.</p>
+								<p class="justified">Educated CIOs on how to effectually enforce policy around the storage, processing, access, sharing, and consolidation of personal data.</p>
+								<p class="justified">Administered initiatives set around securing Salesforce Clouds, including but not limited, Sales Cloud, Community Cloud and Service Cloud.</p>
+								<p class="justified">Led conversations with cyber security directors/executives around autonomous cyber security training platforms for enterprises.</p>						
+							</div>
 
-            <!-- Projects -->
-            <section>
-                <h3>Projects</h3>
-                <div class="project-entry">
-                    <h4>Cloud Resume Deployment</h4>
-                    <p class="project-date">March 2022</p>
-                    <p>Built a cloud-hosted website with a database, API Gateway, custom domain, HTTPS,
-                        and Python 3 serverless functions, packaged using an AWS SAM template.</p>
-                </div>
-            </section>
+							<div class="job last">
+								<h2>Globe Life</h2>
+								<h3>Business Development Manager</h3>
+								<h4>2017-2019</h4>
+								<p class="justified">Managed a team of high-performing producers, generating an average of $500,000 ARR (Annual Recurring Revenue).</p>
+								<p class="justified">Improved team production and performance by creating detailed, real-time goal-tracking systems that monitored progress.</p>							
+							</div>
 
-        </main>
+						</div><!--// .yui-u -->
+					</div><!--// .yui-gf -->
 
-    </div><!-- end body-wrapper -->
 
-    <!-- ─── Footer ─── -->
-    <footer>
-        <p>Ekemini L. Essien — miniessien@gmail.com — (469) 647-2097</p>
-        <p>Hi there! You are visitor number <span id="visitor-count">—</span></p>
-        <script src ="script.js"></script>
-    </footer>
+					<div class="yui-gf last">
+						<div class="yui-u first">
+							<h2>Education</h2>
+						</div>
+						<div class="yui-u">
+							<h2>Solent University - Southampton, England</h2>
+							<h3>Master of Science, Management &mdash; <strong>Grade: First Class</strong> </h3>
+						<br>	
+						</div>
+						<div class="yui-u">
+							<h2>Houston Baptist University - Houston, Texas</h2>
+							<h3>Bachelor, Business Administration &mdash; <strong>3.7 GPA</strong> </h3>
+						</div>
+					</div><!--// .yui-gf -->
 
-</div><!-- end page -->
+
+				</div><!--// .yui-b -->
+			</div><!--// yui-main -->
+		</div><!--// bd -->
+
+		<div id="ft">
+			<p>Ekemini L. Essien &mdash; <a href="mailto:miniessien@gmail.com">miniessien@gmail.com</a> &mdash; (469) - 647-2097</p>
+			<br>
+			<h1>Hi there!</h1>
+			<h1>You are visitor number <a> <span id="count"></span> </a></h1>
+			<script src ="script.js"></script>
+
+		</div><!--// footer -->
+
+	</div><!-- // inner -->
+
+
+</div><!--// doc -->
+
 
 </body>
 </html>
+
