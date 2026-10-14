@@ -1,72 +1,346 @@
-/*
----------------------------------------------------------------------------------
-	STRIPPED DOWN RESUME TEMPLATE
-    html resume
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekemini Liron Essien — Resume</title>
+    <style>
+        /* ─── Reset & Base ─── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    v0.9: 5/28/09
+        body {
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+            color: #1a1a1a;
+            background-color: #f0f2f5;
+            line-height: 1.6;
+        }
 
-    design and code by: thingsthatarebrown.com 
-                        (matt brown)
----------------------------------------------------------------------------------
-*/
+        a {
+            color: #2c5f8a;
+            text-decoration: none;
+        }
 
+        a:hover {
+            text-decoration: underline;
+        }
 
-.msg { padding: 10px; background: #222; position: relative; }
-.msg h1 { color: #fff;  }
-.msg a { margin-left: 20px; background: #408814; color: white; padding: 4px 8px; text-decoration: none; }
-.msg a:hover { background: #266400; }
+        /* ─── Page Wrapper ─── */
+        .page {
+            max-width: 960px;
+            margin: 40px auto;
+            background: #ffffff;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            border-radius: 6px;
+            overflow: hidden;
+        }
 
-/* //-- yui-grids style overrides -- */
-body { font-family: Georgia; color: #444; }
-#inner { padding: 10px 80px; margin: 80px auto; background: #f5f5f5; border: solid #666; border-width: 8px 0 2px 0; }
-.yui-gf { margin-bottom: 2em; padding-bottom: 2em; border-bottom: 1px solid #ccc; }
+        /* ─── Header ─── */
+        header {
+            background-color: #1b2a3b;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 40px 30px;
+        }
 
-/* //-- header, body, footer -- */
-#hd { margin: 2.5em 0 3em 0; padding-bottom: 1.5em; border-bottom: 1px solid #ccc }
-#hd h2 { text-transform: uppercase; letter-spacing: 2px; }
-#bd, #ft { margin-bottom: 2em; }
+        header h1 {
+            font-size: 2.2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
 
-/* //-- footer -- */
-#ft { padding: 1em 0 5em 0; font-size: 92%; border-top: 1px solid #ccc; text-align: center; }
-#ft p { margin-bottom: 0; text-align: center;   }
+        header h2 {
+            font-size: 1em;
+            font-weight: normal;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #a8c0d6;
+            margin-bottom: 12px;
+        }
 
-/* //-- core typography and style -- */
-#hd h1 { font-size: 48px; text-transform: uppercase; letter-spacing: 3px; }
-h2 { font-size: 152% }
-h3, h4 { font-size: 122%; }
-h1, h2, h3, h4 { color: #333; }
-p { font-size: 100%; line-height: 18px; padding-right: 3em; }
-a { color: #990003 }
-a:hover { text-decoration: none; }
-strong { font-weight: bold; }
-li { line-height: 24px; border-bottom: 1px solid #ccc; }
-p.enlarge { font-size: 144%; padding-right: 6.5em; line-height: 24px; }
-p.enlarge span { color: #000 }
-.contact-info { margin-top: 7px; }
-.first h2 { font-style: italic; }
-.last { border-bottom: 0 }
+        header .contact-line {
+            font-size: 0.88em;
+            color: #cdd9e5;
+            margin-bottom: 18px;
+        }
 
-/* //-- section styles -- */
+        header .contact-line a {
+            color: #a8c0d6;
+        }
 
-a#pdf { display: block; float: left; background: #666; color: white; padding: 6px 50px 6px 12px; margin-bottom: 6px; text-decoration: none;  }
-a#pdf:hover { background: #222; }
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 0.85em;
+            margin-bottom: 18px;
+        }
 
-.job { position: relative; margin-bottom: 1em; padding-bottom: 1em; border-bottom: 1px solid #ccc; }
-.job h4 { position: absolute; top: 0.35em; right: 0 }
-.job p { margin: 0.75em 0 3em 0; }
+        header nav a,
+        header nav span {
+            color: #a8c0d6;
+            border: 1px solid #3a5068;
+            padding: 4px 12px;
+            border-radius: 20px;
+            transition: background 0.2s;
+        }
 
-.last { border: none; }
-.skills-list ul { margin: 0; }
-.skills-list li { margin: 3px 0; padding: 3px 0; }
-.skills-list li span { font-size: 152%; display: block; margin-bottom: -2px; padding: 0 }
-.talent { width: 32%; float: left }
-.talent h2 { margin-bottom: 6px; }
+        header nav a:hover {
+            background: #2c5f8a;
+            text-decoration: none;
+        }
 
-#srt-ttab { margin-bottom: 100px; text-align: center;  }
-#srt-ttab img.last { margin-top: 20px }
+        .download-btn {
+            display: inline-block;
+            background-color: #2c7be5;
+            color: #fff !important;
+            padding: 8px 22px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            letter-spacing: 1px;
+            transition: background 0.2s;
+        }
 
-/* --// override to force 1/8th width grids -- */
-.yui-gf .yui-u{width:80.2%;}
-.yui-gf div.first{width:12.3%;}
+        .download-btn:hover {
+            background-color: #1a5fbb;
+            text-decoration: none;
+        }
 
+        /* ─── Body Layout ─── */
+        .body-wrapper {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            align-items: start;
+        }
 
+        /* ─── Sidebar ─── */
+        aside {
+            background-color: #f7f9fb;
+            border-right: 1px solid #e0e6ed;
+            padding: 30px 24px;
+            min-height: 100%;
+        }
+
+        aside section {
+            margin-bottom: 30px;
+        }
+
+        aside h3 {
+            font-size: 0.75em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #2c5f8a;
+            border-bottom: 2px solid #2c5f8a;
+            padding-bottom: 6px;
+            margin-bottom: 14px;
+        }
+
+        /* Certifications */
+        aside .cert-list {
+            list-style: none;
+        }
+
+        aside .cert-list li {
+            margin-bottom: 14px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #e0e6ed;
+            font-size: 0.88em;
+        }
+
+        aside .cert-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        aside .cert-list strong {
+            display: block;
+            color: #1b2a3b;
+            font-size: 0.95em;
+            margin-bottom: 2px;
+        }
+
+        aside .cert-list span {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Skills */
+        aside .skill-list {
+            list-style: none;
+        }
+
+        aside .skill-list li {
+            font-size: 0.87em;
+            margin-bottom: 10px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        aside .skill-list strong {
+            display: block;
+            color: #1b2a3b;
+            margin-bottom: 2px;
+        }
+
+        /* Education */
+        aside .edu-entry {
+            margin-bottom: 16px;
+            font-size: 0.88em;
+        }
+
+        aside .edu-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        aside .edu-entry strong {
+            display: block;
+            color: #1b2a3b;
+            font-size: 0.95em;
+        }
+
+        aside .edu-entry .edu-year {
+            color: #2c5f8a;
+            font-size: 0.9em;
+        }
+
+        aside .edu-entry .edu-degree {
+            color: #444;
+            margin-top: 2px;
+        }
+
+        /* ─── Main Content ─── */
+        main {
+            padding: 30px 32px;
+        }
+
+        main section {
+            margin-bottom: 30px;
+        }
+
+        main h3 {
+            font-size: 0.75em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #2c5f8a;
+            border-bottom: 2px solid #2c5f8a;
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+        }
+
+        /* Profile */
+        .profile-text {
+            font-size: 0.92em;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* Job Entries */
+        article {
+            margin-bottom: 22px;
+        }
+
+        article:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .job-header h4 {
+            font-size: 0.97em;
+            color: #1b2a3b;
+            font-weight: bold;
+        }
+
+        .job-header .job-dates {
+            font-size: 0.82em;
+            color: #2c7be5;
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        article ul {
+            list-style: disc;
+            padding-left: 18px;
+        }
+
+        article ul li {
+            font-size: 0.88em;
+            color: #333;
+            margin-bottom: 5px;
+            line-height: 1.6;
+        }
+
+        /* Projects */
+        .project-entry h4 {
+            font-size: 0.97em;
+            color: #1b2a3b;
+            font-weight: bold;
+        }
+
+        .project-entry .project-date {
+            font-size: 0.82em;
+            color: #2c7be5;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+
+        .project-entry p {
+            font-size: 0.88em;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ─── Footer ─── */
+        footer {
+            background-color: #1b2a3b;
+            color: #a8c0d6;
+            text-align: center;
+            padding: 18px 40px;
+            font-size: 0.82em;
+        }
+
+        footer p {
+            margin-bottom: 4px;
+        }
+
+        footer span {
+            color: #2c7be5;
+            font-weight: bold;
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 700px) {
+            .body-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            aside {
+                border-right: none;
+                border-bottom: 1px solid #e0e6ed;
+            }
+
+            .job-header {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
