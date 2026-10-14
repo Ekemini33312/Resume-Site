@@ -1,1 +1,17 @@
 pytest
+
+#s3 buckets
+#DO NOT delete the following buckets, they are used for storing static files and media files for the resume application.
+# - aws-sam-cli-managed-default-samclisourcebucket-43g4ygso0wa0
+# - cf-templates-16ibx32a13629-us-east-1
+# - www.eleresume.com
+# - eleresume.com
+
+#cache invalidations
+#go to aws cloudfront, create invalidation for the distribution, and add the following paths:
+#/**/*
+#/*
+
+#4 years later updating my resume app broke - what i did to fix it:
+#1. Updated credentials in github secrets for AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY to match my new AWS user
+#2. Recreated the S3 bucket I deleted a few months ago to match the bucket referernced samconfig.toml file 
