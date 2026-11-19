@@ -77,29 +77,30 @@
                 <ul class="skill-list">
                     <li>
                         <strong>Cloud & Infrastructure</strong>
-                        AWS, EC2, ECS, S3, RDS, VPC, IAM, Route 53, CloudFront, 
-                        Elastic Load Balancing, Lambda, Secrets Manager
+                        AWS, EC2, ECS, S3, RDS, VPC, IAM, Route 53, ELB, CloudFront, 
+                        ELB, Lambda, Secrets Manager, CloudFormation, 
+                        Terraform, CloudWatch, CloudTrail
                     </li>
                     <li>
                         <strong>Cloud Security</strong>
-                        CIS, AWS Security Hub CSPM, IAM/RBAC/ABAC, least privilege, MFA, 
+                        CIS, SSO, MFA, AWS Security Hub CSPM, IAM/RBAC/ABAC, SCA, SAST, DAST, least privilege, 
                         vulnerability management & remediation
                     </li>
                     <li>
                         <strong>DevSecOps & Automation</strong>
-                        Terraform, CloudFormation Policy as Code, GitHub Actions, Python, AWS Lambda
+                        Terraform, Jenkins, GitLab CI, Docker, Ansible, Kubernetes, GitHub Actions, Python
                     </li>
                     <li>
                         <strong>Networking</strong>
-                        VPC, route tables, VPN/OpenVPN/Site-to-Site, DNS, TLS, load balancers
+                        VPC, VPN, firewall, route tables, OpenVPN/Site-to-Site, DNS, TLS/SSL
                     </li>
                     <li>
                         <strong>Data & Platforms</strong>
-                        Databricks, Athena, DynamoDB, RDS, MySQL, SQL/NoSQL, Alteryx, Tableau, JSON/YAML
+                        Databricks, Athena, DynamoDB, RDS, MySQL, SQL/NoSQL, Alteryx, Tableau, DataDog
                     </li>
                     <li>
                         <strong>Compliance & Privacy</strong>
-                        SOC2, security architecture reviews, access reviews, data privacy, CCPA
+                        SOC1, SOC 2, security architecture reviews, access reviews, data privacy, CCPA
                     </li>
                 </ul>
             </section>
@@ -128,9 +129,12 @@
             <section>
                 <h3>Profile</h3>
                 <p class="profile-text">
-                    Engineering and security professional with a track record securing AWS environments, implementing IAM/RBAC and
-                    policy-as-code controls, driving cloud security risk reduction, SOC2 compliance, and improving resiliency. 
-                    Combines hands-on engineering with security and strong communication skills.
+                    Engineering and security professional experienced in building and securing AWS environments, 
+                    embedding security into CI/CD pipelines, and automating controls through IaC. 
+                    Skilled in IAM/RBAC, vulnerability management, application security testing, SOC 1/SOC 2 compliance, 
+                    and cloud risk reduction. Combines hands-on engineering with cross-functional collaboration to enable secure, 
+                    resilient software delivery.
+
 
                 </p>
             </section>
@@ -146,30 +150,13 @@
                         <span class="job-dates">April 2022 – Present</span>
                     </div>
                     <ul>
-                        <li>Engineered and enforced AWS security controls across IAM, S3, EC2, RDS, VPC,
-                            ELB, and Secrets Manager spanning 5 organizational accounts and 9 teams,
-                            securing 100+ users while maintaining alignment with AWS Foundational Security
-                            Best Practices and CIS AWS Foundations benchmarks.</li>
-                        <li>Built and led Tunnl's SOC 2 compliance program from inception, delivering 5
-                            successful audit issuances across SOC 1 and SOC 2 Type I/II certifications —
-                            directly unlocking Fortune 500 client opportunities and strengthening enterprise
-                            security posture.</li>
-                        <li>Drove a 22% reduction in security findings by executing continuous cloud security
-                            assessments, vulnerability remediation, and control enhancements via AWS Security
-                            Hub — achieving an average remediation time of 11 days across a multi-team
-                            engineering environment.</li>
-                        <li>Partnered with Platform, API, ETL, and Data teams to close systemic security gaps
-                            and harden cloud configurations, reducing recurring vulnerabilities while aligning
-                            remediation priorities with executive and business stakeholders.</li>
-                        <li>Architected Terraform and JSON policy-as-code frameworks to enforce security best
-                            practices and standardize configurations across 25 AWS organizational accounts,
-                            eliminating configuration drift at scale.</li>
-                        <li>Provisioned and administered identity and access management across AWS, Databricks,
-                            GitHub, VPN, and additional enterprise platforms — supporting 9 departments and
-                            50+ contractors with consistent, least-privilege access controls.</li>
-                        <li>Automated credential rotation using AWS Lambda and Secrets Manager, reducing
-                            manual security operations and minimizing credential exposure risk across the
-                            organization.</li>
+                        <li>Engineered and enforced AWS security controls across 8+ services (IAM, S3, EC2, RDS, VPC, ELB, Secrets Manager) spanning 5 organizational accounts and 9 teams, securing 100+ users while maintaining full compliance with AWS Foundational Security Best Practices and CIS AWS Foundations benchmarks.</li>
+                        <li>Built and led Tunnl's SOC 2 compliance program from inception, delivering 5 successful audit issuances across SOC 1 and SOC 2 Type I/II certifications.</li>
+                        <li>Drove a 22% reduction in organization-wide security findings through continuous cloud security assessments, vulnerability remediation, and security control enhancements using SAST, DAST, SCA, and AWS Security Hub, achieving an average remediation time of 11 days across a cross-functional engineering environment.</li>
+                        <li>Architected and standardized secure AWS environments using Terraform across 25 organizational accounts, embedding security best practices into infrastructure provisioning and eliminating configuration drift at scale.</li>
+                        <li>Provisioned and administered SSO-based identity and access management across AWS, Databricks, GitHub, VPN, and other enterprise platforms, supporting 9 departments and 50+ contractors while enforcing consistent, least-privilege access controls.</li>
+                        <li>Designed and implemented a multi-AZ, pilot-light disaster recovery environment in AWS, establishing failover capabilities across S3, ECS, RDS, AWS Client VPN, DNS, and application services to support business continuity and minimize recovery time during service disruptions.</li>
+                        <li>Automated credential rotation using AWS Lambda and Secrets Manager, reducing manual security operations and minimizing credential exposure risk across the organization.</li>
                         <li>Spearheaded implementation of a SaaS privacy-request platform, integrating vendor
                             APIs with AWS RDS and S3 — processing 506,000+ deletion requests, 32 access
                             requests, and 44 opt-out requests with average completion times under 7 hours,
